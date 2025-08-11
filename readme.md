@@ -16,4 +16,5 @@ Este repositorio alberga los script utilizados en la PoC Detección de Patrones 
 └─ README.md
 ```
 
+## 🗺️ Diagrama de la PoC
 ![Diagrama](diagram/track_1.jpg)
