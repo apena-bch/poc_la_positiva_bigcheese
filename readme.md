@@ -12,6 +12,6 @@ Este repositorio alberga los script utilizados en la PoC Detección de Patrones 
 │     └─ la-positiva-poc-ocr-ml-processor-dev.py
 │     └─ la-positiva-poc-ocr-ml-text-finish-complaint-text-detection-dev.py
 ├─ diagram/
-│  ├─ track_1.jpg
+│  ├─ ![track_1.jpg](diagram/track_1.jpg)
 └─ README.md
 ```
