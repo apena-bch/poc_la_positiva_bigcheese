@@ -5,15 +5,13 @@ Este repositorio alberga los script utilizados en la PoC Detección de Patrones 
 
 ```text
 .
-├─ scripts/             # Scripts ejecutables (Python, Bash, Node, etc.)
-│  ├─ README.md         # (opcional) documentación específica de scripts
-│  └─ ...               # tus scripts, p. ej. extract_confidence.py
-├─ diagrams/            # Diagramas (Mermaid, Draw.io/Diagrams.net, PNG/SVG)
-│  ├─ arquitectura.mmd  # ejemplo Mermaid
-│  ├─ arquitectura.drawio
-│  └─ ...
-├─ data/                # (opcional) archivos de ejemplo / fixtures
-├─ .env.example         # variables de entorno de ejemplo
-├─ requirements.txt     # o pyproject.toml / package.json según corresponda
+├─ scripts/
+│  └─ glue/
+│     └─ la-positiva-ocr-ml-dev-script-batch-dispatcher.py
+│  └─ lambda/
+│     └─ la-positiva-poc-ocr-ml-processor-dev.py
+│     └─ la-positiva-poc-ocr-ml-text-finish-complaint-text-detection-dev.py
+├─ diagram/
+│  ├─ track_1.jpg
 └─ README.md
 ```
