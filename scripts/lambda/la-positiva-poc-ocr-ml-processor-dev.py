@@ -194,11 +194,12 @@ def process_document(bucket_name, object_key):
             document_text = obj["Body"].read().decode("utf-8", errors="replace")
             #print(document_text)
 
-            parsed_result_dba_url = urlparse(src_uri)
-            key_result_bda_url = parsed_result_dba_url.path.lstrip("/")
-            dest_key = key_result_bda_url.rsplit("/", 1)[0] + "/contenido_denuncia.json"
-
-            print(f"Result bda url: {key_result_bda_url} and dest key {dest_key}")
+            # Destination key for LLM analysis
+            #parsed_result_dba_url = urlparse(src_uri)
+            #key_result_bda_url = parsed_result_dba_url.path.lstrip("/")
+            #dest_key = key_result_bda_url.rsplit("/", 1)[0] + "/contenido_denuncia.json"
+            dest_key = f"txt_processed/{document_id}_case_{case_id}.json"
+            #print(f"Result bda url: {key_result_bda_url} and dest key {dest_key}")
 
             # Prepare prompt
             prompt = PROMPT_TEMPLATE.format(document_text=document_text)
@@ -249,7 +250,7 @@ def process_document(bucket_name, object_key):
                     'document_id': document_id,
                     "message": "Saved JSON to S3",
                     "dest_bucket": RESULTS_BUCKET,
-                    "dest_key": dest_key,
+                    "dest_key_llm": dest_key,
                     'bda_invocation_arn': invocation_arn,
                     'status': final_state
                 },
